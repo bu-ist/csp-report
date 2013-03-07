@@ -1,0 +1,40 @@
+{
+    "name": "csp-report",
+    "description": "Simple CSP report logger.",
+    "version": "0.1.0",
+    "author": "Roland Warmerdam (http://rolandwarmerdam.co.nz)",
+    "homepage": "https://github.com/Rowno/csp-report",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Rowno/csp-report.git"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://raw.github.com/Rowno/csp-report/master/LICENSE"
+        }
+    ],
+    "bugs": {
+        "url": "https://github.com/Rowno/csp-report/issues"
+    },
+    "engines": {
+        "node": "0.8.x"
+    },
+    "dependencies": {
+        "express": "3.1.x",
+        "sequelize": "1.6.x",
+        "sqlite3": "2.1.x"
+    },
+    "devDependencies": {
+        "grunt": "0.4.x",
+        "grunt-contrib-clean": "0.4.x",
+        "grunt-contrib-jshint": "0.1.x",
+        "grunt-mocha-cli": "1.0.x",
+        "should": "1.2.x",
+        "request": "2.14.x"
+    },
+    "scripts": {
+        "test": "grunt test"
+    },
+    "private": true
+}
