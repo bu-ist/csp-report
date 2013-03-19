@@ -1,8 +1,8 @@
 'use strict';
 
 var request = require('request');
-var db = require('../lib/db');
-var Server = require('../lib/server');
+var sequelize = require('../lib/sequelize');
+require('../server');
 
 var fixture = {
     'csp-report': {
@@ -13,9 +13,6 @@ var fixture = {
         'original-policy': 'script-src \'self\' https://apis.google.com; report-uri http://example.org/my_amazing_csp_report_parser'
     }
 };
-
-var server = new Server();
-server.start();
 
 
 describe('server', function () {
@@ -30,7 +27,7 @@ describe('server', function () {
                 return;
             }
 
-            db.Report.all().success(function (reports) {
+            sequelize.Report.all().success(function (reports) {
                 reports.should.have.length(1);
 
                 var values = reports[0].values;

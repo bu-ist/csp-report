@@ -23,9 +23,10 @@
     "dependencies": {
         "express": "3.1.x",
         "sequelize": "1.6.x",
-        "sqlite3": "2.1.x"
+        "pg": "0.14.x"
     },
     "devDependencies": {
+        "sqlite3": "2.1.x",
         "grunt": "0.4.x",
         "grunt-contrib-clean": "0.4.x",
         "grunt-contrib-jshint": "0.1.x",
