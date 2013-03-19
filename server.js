@@ -10,7 +10,6 @@ var app = express();
 app.use(express.bodyParser());
 
 app.post('/', function (req, res) {
-    console.log(req.body);
     sequelize.Report.create(req.body['csp-report']).done(function () {
         res.end();
     });
