@@ -9,8 +9,11 @@ var fixture = {
         'document-uri': 'http://example.org/page.html',
         'referrer': 'http://evil.example.com/',
         'blocked-uri': 'http://evil.example.com/evil.js',
+        'effective-directive': 'script-src',
         'violated-directive': 'script-src \'self\' https://apis.google.com',
-        'original-policy': 'script-src \'self\' https://apis.google.com; report-uri http://example.org/my_amazing_csp_report_parser'
+        'original-policy': 'script-src \'self\' https://apis.google.com; report-uri http://example.org/my_amazing_csp_report_parser',
+        'source-file': 'evil.js',
+        'line-number': '56'
     }
 };
 
