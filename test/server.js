@@ -13,7 +13,8 @@ var fixture = {
         'violated-directive': 'script-src \'self\' https://apis.google.com',
         'original-policy': 'script-src \'self\' https://apis.google.com; report-uri http://example.org/my_amazing_csp_report_parser',
         'source-file': 'evil.js',
-        'line-number': '56'
+        'line-number': '56',
+        'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.22 (KHTML, like Gecko) Chrome/25.0.1364.172 Safari/537.22'
     }
 };
 
@@ -23,6 +24,9 @@ describe('server', function () {
         request({
             url: 'http://localhost:8000',
             method: 'post',
+            headers: {
+                'User-Agent': fixture['csp-report']['user-agent']
+            },
             json: fixture
         }, function (error) {
             if (error) {

@@ -10,9 +10,17 @@ var app = express();
 app.use(express.bodyParser());
 
 app.post('/', function (req, res) {
-    sequelize.Report.create(req.body['csp-report']).done(function () {
+    var report = req.body['csp-report'];
+
+    if (report) {
+        report['user-agent'] = req.headers['user-agent'];
+
+        sequelize.Report.create(report).done(function () {
+            res.end();
+        });
+    } else {
         res.end();
-    });
+    }
 });
 
 app.listen(PORT);
