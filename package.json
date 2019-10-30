@@ -21,7 +21,7 @@
         "node": "0.10.x"
     },
     "dependencies": {
-        "express": "~3.2.6",
+        "express": "~4.17.1",
         "sequelize": "~1.6.0",
         "pg": "~1.3.0"
     },
